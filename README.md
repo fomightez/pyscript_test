@@ -20,5 +20,5 @@
 
 - Full example of Eduardo Bonet
 
-  [Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345) at least for now doesn't seem to work on GitHub for me. It's showing in the 'Inspect' console that it is out of memory, specifically gives "WebAssembly module validated with warning: failed to allocate executable memory for module". **It works from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite
+  [Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345) at least for now doesn't seem to work on GitHub for me when the notebook has both markdown and code. It's showing in the 'Inspect' console that it is out of memory, specifically gives "WebAssembly module validated with warning: failed to allocate executable memory for module". **It works from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite
 
