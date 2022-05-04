@@ -4,7 +4,7 @@
 
 - Full example of Eduardo Bonet
 
-[Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345) at least for now doesn't seem to work on GitHub for me. **It works from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite
+  [Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345) at least for now doesn't seem to work on GitHub for me. **It works from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite
 
 ### What does work here
 
