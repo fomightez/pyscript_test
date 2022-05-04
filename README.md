@@ -15,10 +15,21 @@
 [direct_example.html](https://fomightez.github.io/pyscript_test/direct_example.html) is based on the example [this post](https://twitter.com/ericmjl/status/1520865845978746880) with the code from [this gist](https://gist.github.com/ericmjl/0e46f3810b7bac281ddc419176944483templates)
 
 
+----------
+
+### What sort of works here
+
+- Code in Eduoardo's example notebook runs to generate a plot
+
+[eduardo_sample_example.html](https://fomightez.github.io/pyscript_test/eduardo_sample_example.html) works to show plot being made from the code when you click the green arrow. However, it is supposed to also be showing markdown from the notebook being rendered and that is why same example is also udner 'What doesn't work here' (Note: it looks like [the posted example](https://twitter.com/ericmjl/status/1520865845978746880) though and so Eduardo Bonet who posted this example was also not seeing markdown rendered even though he tried to have the javascript handle that.). 
+[Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345).  
+Demonstrates numpy and matplotlib directly in a browser from static site.
+
+
 -------------------------
 ### What doesn't work here
 
-- Full example of Eduardo Bonet
+- Full example notebook of Eduardo Bonet with both code and markdown
 
-  [Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345) at least for now doesn't seem to work on GitHub for me when the notebook has both markdown and code. It's showing in the 'Inspect' console that it is out of memory, specifically gives "WebAssembly module validated with warning: failed to allocate executable memory for module". **It works from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite
+[eduardo_sample_example.html](https://fomightez.github.io/pyscript_test/eduardo_sample_example.html) works to show plot being made from the code when you click the green arrow. However, it is supposed to also be showing markdown from the notebook being rendered. **It displays and works like from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite And so it isn't particular to GitHub and means he was seeing it have issues though. (By stripping out the pyscript stuff, I got the same approach to render markdown, see section '#### Markdown cells from notebook do work.' and so it wasn't like it totally wasn't working. And in fact when it was failing to make markdown render fully, I'd see it render the markdown **for an instant** on hard refresh. And so this is probably a minor hurdle for those that know what they are doing and will get worked out soon. Note sometimes quickly entering inspection mode when trying to see what is messing up markdown rendering I'd note is showing inIt's showing in the 'Inspect' console that it is out of memory, specifically gives "WebAssembly module validated with warning: failed to allocate executable memory for module". But that didn't really seem to stop it from running the code other times when I gave it time.
 
