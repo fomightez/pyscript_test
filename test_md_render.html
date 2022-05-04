@@ -9,13 +9,14 @@
   <body> 
     <div class="container" style="text-align: center;">
         This is just trying to render markdown in a notebook. I was seeing markdown show for an instant on hard refresh and then disappearing & removing pyscript part.
+      <br> REMOVING PYSCRIPT STUFF WORKED SO THE NOTEBOOK THAT ONLY HAS MARKDOWN IN IT RENDERS NOW!! (I don't know why pyscript messes it up but but that is something Eduardo Bonet at  https://eduardobonet.gitlab.io/nblite/ can sort out as he develops that prood-of-concept.)
     </div >
 
     <div id="nb-selector" class="container">
         <form action="test_md_render.html" method="GET">
             <label for="fname">URL to Notebook:</label>
             <input type="text" id="url" name="url" required
-                value="test_nb.ipynb"
+                value="test_nb_md_only.ipynb"
             >
             <input type="submit" value="Submit" style="display: inline;">
         </form>
