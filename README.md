@@ -1,8 +1,5 @@
 ## trying pyscript stuff
 
-### What doesn't work here
-
-
 
 ### What does work here
 
@@ -19,6 +16,7 @@
 
 
 -------------------------
+### What doesn't work here
 
 - Full example of Eduardo Bonet
 
