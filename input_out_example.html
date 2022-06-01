@@ -29,7 +29,8 @@ def my_function(*args, **kwargs):
     #print('text:', text)
     console.log(f'text: {text}')
 
-    Element('test-output').element.innerText = text
+    #Element('test-output').element.innerText = text
+    pyscript.write('test-output', text)
 </py-script>
 
   </body>
