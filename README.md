@@ -3,6 +3,11 @@
 
 ### What does work here
 
+#### Pandas dataframe input and display
+
+- In October 2022 I added examples using Pandas' `read_csv()` to get and render dataframes (also using panel for rendering) based on updated pyscript using py-config now. See `pandastest.html` and `csv_read_display_df_with_panel.html` and `csv_read_test.html`.
+
+
 #### Markdown cells from notebook do work.
 
 - Example with only markdown cells in a notebook based on the example of Eduardo Bonet
@@ -18,8 +23,6 @@
 ----------
 
 ### What sort of works here
-
-- In October 2022 I added examples using Pandas' `read_csv()` to get and render dataframes (also using panel for rendering) based on updated pyscript using py-config now. See `pandastest.html` and `csv_read_display_df_with_panel.html` and `csv_read_test.html`.
 
 - Code in Eduoardo's example notebook runs to generate a plot
 
