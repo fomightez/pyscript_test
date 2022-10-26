@@ -19,6 +19,8 @@
 
 ### What sort of works here
 
+- In October 2022 I added examples using Pandas' `read_csv()` to get and render dataframes (also using panel for rendering) based on updated pyscript using py-config now. See `pandastest.html` and `csv_read_display_df_with_panel.html` and `csv_read_test.html`.
+
 - Code in Eduoardo's example notebook runs to generate a plot
 
 [eduardo_sample_example.html](https://fomightez.github.io/pyscript_test/eduardo_sample_example.html) works to show plot being made from the code when you click the green arrow. However, it is supposed to also be showing markdown from the notebook being rendered and that is why same example is also udner 'What doesn't work here' (Note: it looks like [the posted example](https://twitter.com/ericmjl/status/1520865845978746880) though and so Eduardo Bonet who posted this example was also not seeing markdown rendered even though he tried to have the javascript handle that.). 
