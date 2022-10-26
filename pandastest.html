@@ -24,6 +24,7 @@ packages = [
         <h1>Hello World!</h1>
         <p>This is a test To see how my html code is.</p>
         <p>This is the 2nd line of the body.</p>
+        <div id="table"></div>
 
         <py-script>
         
@@ -39,7 +40,7 @@ df = pd.read_csv(open_url("https://raw.githubusercontent.com/fomightez/pyscript_
 print(df.head())
 print(df.to_html())
           
-table = pn.widgets.Tabulator(pagination='remote', page_size=10)
+table = pn.widgets.Tabulator(pagination='remote', page_size=1)
 table.value = df
 await show(table, 'table')
 
