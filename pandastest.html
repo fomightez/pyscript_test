@@ -38,8 +38,10 @@ url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.c
 df = pd.read_csv(open_url("https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv"))
 print(df.head())
 print(df.to_html())
-df_pane = pn.pane.DataFrame(df, width=400)
-show(df_pane, 'df_pane')
+          
+table = pn.widgets.Tabulator(pagination='remote', page_size=10)
+table.value = df
+await show(table, 'table')
 
 
         </py-script>
