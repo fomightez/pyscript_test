@@ -18,7 +18,7 @@ packages = [
 import pandas as pd
 from pyodide.http import open_url
 
-df = pd.read_csv(open_url("/penguins.csv"))
+df = pd.read_csv(open_url("https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv"))
 df
 
 
