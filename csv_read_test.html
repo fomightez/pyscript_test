@@ -42,7 +42,8 @@ df = pd.read_csv(open_url("https://raw.githubusercontent.com/fomightez/pyscript_
 
           
 df_pane = pn.pane.DataFrame(df, width=400)
-await show(df_pane, 'pane')
+show(df_pane, 'pane')
+#df.head().style.format(precision=2)
 
 
 
