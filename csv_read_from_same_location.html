@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Panndas Example with reading from relative url</title>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <py-config>
+packages = [
+    "pandas",
+    "jinja2"
+      ]
+  </py-config>
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is a test To see how my html code is.</p>
+        <p>This space below will become blank as a few seconds is taken to render the dataframe. Be patient ...</p>
+        <div id="pane"></div>
+
+        <py-script>      
+import pandas as pd
+#import jinja2
+
+from pyodide.http import open_url
+
+url = './penguins.csv'
+df = pd.read_csv(open_url(url))
+#print(df.head())
+#print(df.to_html())
+
+df.head(39).style.format(precision=2)
+
+
+
+        </py-script>
+<!-- dcoument based on:
+- things worked out in https://fomightez.github.io/pyscript_test/pandastest.html and then simplifying display without using Panel &
+instead using Pandas df styler method
+- had to add jinja2 to what gets installed to get Pandas styler method to work again if not using panel/bokeh, it seems. However it doesn't
+need importing
+
+-->
+    </body>
+
+</html>
