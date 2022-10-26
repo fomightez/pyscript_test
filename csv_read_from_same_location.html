@@ -21,7 +21,7 @@ import pandas as pd
 
 from pyodide.http import open_url
 
-url = './penguins.csv'
+url = 'penguins.csv'
 df = pd.read_csv(open_url(url))
 #print(df.head())
 #print(df.to_html())
