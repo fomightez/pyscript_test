@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Panndas Example</title>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <py-config>
+packages = [
+    "pandas",
+      ]
+  </py-config>
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is a test To see how my html code is.</p>
+        <p>This is the 2nd line of the body.</p>
+        <div id="pane"></div>
+
+        <py-script>
+        
+import pandas as pd
+
+from pyodide.http import open_url
+
+url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv'
+df = pd.read_csv(open_url("https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv"))
+#print(df.head())
+#print(df.to_html())
+
+df.head().style.format(precision=2)
+
+
+
+        </py-script>
+<!-- dcoument based on:
+- things worked out in https://fomightez.github.io/pyscript_test/pandastest.html and then simplifying display without using Panel &
+instead using Pandas df styler method
+
+
+-->
+    </body>
+
+</html>
