@@ -44,7 +44,7 @@ print(df.to_html())
 table = pn.widgets.Tabulator(pagination='remote', page_size=5)
 table.value = df
 await show(table, 'table')
-df.style.hide(axis="index")
+df.head().style.format(precision=2)
 
         </py-script>
 <!-- dcoument based on:
