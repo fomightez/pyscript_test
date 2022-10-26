@@ -17,7 +17,7 @@ packages = [
 
         <py-script>      
 import pandas as pd
-import jinja2
+#import jinja2
 
 from pyodide.http import open_url
 
@@ -34,7 +34,7 @@ df.head().style.format(precision=2)
 <!-- dcoument based on:
 - things worked out in https://fomightez.github.io/pyscript_test/pandastest.html and then simplifying display without using Panel &
 instead using Pandas df styler method
-
+- had to add jinja2 to get styler method to work again if not using panel/bokeh it seems
 
 -->
     </body>
