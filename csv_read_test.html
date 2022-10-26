@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    < ! ╌ ENTIRE DOCUMENT BASED ON FILE FROM https://github.com/pyscript/pyscript/issues/193#issue-1225589666 and about local file access in https://towardsdatascience.com/3-things-you-must-know-before-building-with-pyscript-245a0a82f2c3 ╌>
+    <head>
+        <script defer src="https://pyscript.net/unstable/pyscript.js"></script>
+        <py-env>
+            - pandas
+            - paths:
+                - /data.csv
+        </py-env>
+        <meta charset="utf-8" />
+        <title>Import Test</title>
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is a test To see how my html code is.</p>
+        <p>This is the 2nd line of the body.</p>
+
+        <py-script>
+        
+import pandas as pd
+data = pd.read_csv('data.csv')
+print(data.head())
+
+        </py-script>
+
+    </body>
+
+</html>
