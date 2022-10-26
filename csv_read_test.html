@@ -1,29 +1,58 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <script defer src="https://pyscript.net/unstable/pyscript.js"></script>
-        <py-env>
-            - pandas
-            - paths:
-                - /penguins.csv
-        </py-env>
-        <meta charset="utf-8" />
-        <title>Import Test</title>
-    </head>
-
+  <head>
+    <title>Panndas Example</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.2.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@holoviz/panel@0.13.0/dist/panel.min.js"></script>
+    <script type="text/javascript">
+      Bokeh.set_log_level("info");
+    </script>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <py-config>
+packages = [
+    "pandas",
+    "panel",
+      ]
+  </py-config>
     <body>
         <h1>Hello World!</h1>
         <p>This is a test To see how my html code is.</p>
         <p>This is the 2nd line of the body.</p>
+        <div id="pane"></div>
 
         <py-script>
         
+import asyncio
 import pandas as pd
-data = pd.read_csv('data.csv')
-print(data.head())
+import panel as pn
+from panel.io.pyodide import show
+
+from pyodide.http import open_url
+
+url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv'
+df = pd.read_csv(open_url("https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv"))
+#print(df.head())
+#print(df.to_html())
+
+          
+df_pane = pn.pane.DataFrame(df, width=400)
+await show(df_pane, 'pane')
+
+
 
         </py-script>
+<!-- dcoument based on:
+- things worked out in https://fomightez.github.io/pyscript_test/pandastest.html and then simplifying display without using table
+- trying to display dataframe directly with panel: https://panel.holoviz.org/reference/panes/DataFrame.html
 
+
+-->
     </body>
 
 </html>
