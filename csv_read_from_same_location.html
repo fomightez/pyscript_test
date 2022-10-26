@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Panndas Example with reading from relative url</title>
+    <title>Panndas Example with reading from relative url in the same location where HTML resides</title>
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <py-config>
@@ -32,10 +32,7 @@ df.head(39).style.format(precision=2)
 
         </py-script>
 <!-- dcoument based on:
-- things worked out in https://fomightez.github.io/pyscript_test/pandastest.html and then simplifying display without using Panel &
-instead using Pandas df styler method
-- had to add jinja2 to what gets installed to get Pandas styler method to work again if not using panel/bokeh, it seems. However it doesn't
-need importing
+- `csv_read_test.html` and changing that to a relative URL to read in the same location as where HTML file is found
 
 -->
     </body>
