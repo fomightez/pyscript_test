@@ -16,6 +16,10 @@ packages = [
         <py-script>
         
 import pandas as pd
+from pyodide.http import open_url
+
+df = pd.read_csv(open_url("/penguins.csv"))
+df
 
 
         </py-script>
