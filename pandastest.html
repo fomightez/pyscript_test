@@ -23,7 +23,7 @@ packages = [
     <body>
         <h1>Hello World!</h1>
         <p>This is a test To see how my html code is.</p>
-        <p>This is the 2nd line of the body.</p>
+        <p>This space below will become blank as several seconds is taken to render the table. Be patient..</p>
         <div id="table"></div>
 
         <py-script>
@@ -45,7 +45,7 @@ table = pn.widgets.Tabulator(pagination='remote', page_size=344)
 table.value = df
 await show(table, 'table')
 
-for x in range(647):
+for x in range(447):
     print("&nbsp;   &nbsp;   &nbsp;  \n")
 
 df.head().style.format(precision=2)
