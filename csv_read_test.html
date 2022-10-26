@@ -6,6 +6,7 @@
   <py-config>
 packages = [
     "pandas",
+    "jinja2"
       ]
   </py-config>
     <body>
@@ -14,9 +15,9 @@ packages = [
         <p>This is the 2nd line of the body.</p>
         <div id="pane"></div>
 
-        <py-script>
-import jinja2        
+        <py-script>      
 import pandas as pd
+import jinja2
 
 from pyodide.http import open_url
 
