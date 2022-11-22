@@ -21,14 +21,18 @@ packages = [
         <py-script>      
 import cv2
 import numpy as np
+from io import BytesIO
+from PIL import Image
 #import jinja2
 
 from pyodide.http import open_url
 
 url = 'clown.png'
 # reading image from a URL for CV2 based on https://stackoverflow.com/a/21062034/8508004
+# more precisely https://stackoverflow.com/a/67415360/8508004
 req = open_url(url)
-arr = np.asarray(bytearray(req.read(), encoding='utf8'), dtype=np.uint8)
+img = Image.open(BytesIO(req))
+arr = np.array(img)
 image = cv2.imdecode(arr, -1) # 'Load it as it is'
 # example code from https://learning.rc.virginia.edu/notes/opencv/
 #image = cv2.imread(open_url(url))
