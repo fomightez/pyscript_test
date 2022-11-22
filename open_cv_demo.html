@@ -29,7 +29,7 @@ url = 'clown.png'
 # reading image from a URL for CV2 based on https://stackoverflow.com/a/21062034/8508004
 req = open_url(url)
 arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
-image = cv2.imdecode(arr, -1) # 'Load it as it is'
+image = cv2.imdecode(arr, cv2.IMREAD_COLOR) # `cv2.IMREAD_COLOR` from https://stackoverflow.com/a/55026951/8508004
 # example code from https://learning.rc.virginia.edu/notes/opencv/
 #image = cv2.imread(open_url(url))
 (h, w, d) = image.shape
