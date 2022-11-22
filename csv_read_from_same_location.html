@@ -5,35 +5,72 @@
   </head>
   <py-config>
 packages = [
-    "pandas",
+    "opencv-python",
+    "matplotlib",
     "jinja2"
       ]
   </py-config>
     <body>
         <h1>Hello World!</h1>
+        <p> This is based on 'Panndas Example with reading from relative url in the same location where HTML resides' https://github.com/fomightez/pyscript_test/blob/main/csv_read_from_same_location.html</p>
+        <p>And then trying out what worked from https://stackoverflow.com/questions/74533570/pyscript-modulenotfounderror-no-module-named-cv2#comment131573724_74533570 where I used Pyodide in JupyterLite to use OpenCV. code at https://gist.github.com/fomightez/2277f4f55cfdb02ea6a7a5d3ca0e335f and niciew view at https://nbviewer.org/gist/fomightez/2277f4f55cfdb02ea6a7a5d3ca0e335f</p>
         <p>This is a test To see how my html code is.</p>
-        <p>This space below will become blank as a few seconds is taken to render the dataframe. Be patient ...</p>
+        <p>This space below will become blank as a few seconds is taken to render the ????????. Be patient ...</p>
         <div id="pane"></div>
+        <img id ="img" src="src">
 
         <py-script>      
-import pandas as pd
+import cv2
+import numpy as np
+from io import BytesIO
+from PIL import Image
 #import jinja2
 
 from pyodide.http import open_url
 
-url = 'penguins.csv'
-df = pd.read_csv(open_url(url))
-#print(df.head())
-#print(df.to_html())
+async def download(url):
+            filename = Path(url).name
+            response = await pyfetch(url)
+            if response.status == 200:
+                status = response.status
+                with open(filename, mode="wb") as file:
+                    file.write(await response.bytes())
+                return filename, status
+            else:
+                status = response.status
+                filename = None
+                return filename, status
 
-df.head(39).style.format(precision=2)
+async def process_response(url):
+            response_content = await loop.run_until_complete(
+                download(url)
+                )
+            if response_content[1] == 200:
+                data = base64.b64encode(open(response_content[0], "rb").read()).decode("utf-8")
+                src = f"data:image/png;base64,{data}"
+                return src
+            else:
+                src = None
+                return src
+
+url = 'clown.png'
+img = await process_response(url)
+document.querySelector("img").setAttribute("src", img)
+# example code from https://learning.rc.virginia.edu/notes/opencv/
+#image = cv2.imread(open_url(url))
+(h, w, d) = image.shape
+print('width={}, height={}, depth={}'.format(w, h, d))
+
+roi = image[30:130,140:240]
+plt.imshow(cv2.cvtColor(roi,cv2.COLOR_BGR2RGB))
+plt.show()
 
 
 
         </py-script>
 <!-- dcoument based on:
 - `csv_read_test.html` and changing that to a relative URL to read in the same location as where HTML file is found;
-also works with `url = './penguins.csv'`
+also works with `url = './clown.png'`
 
 -->
     </body>
