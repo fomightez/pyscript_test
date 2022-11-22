@@ -26,7 +26,7 @@ from pyodide.http import open_url
 
 url = 'clown.png'
 # example code from https://learning.rc.virginia.edu/notes/opencv/
-image = cv2.imread(open_url(url))
+image = cv2.imread('clown.png')
 (h, w, d) = image.shape
 print('width={}, height={}, depth={}'.format(w, h, d))
 
