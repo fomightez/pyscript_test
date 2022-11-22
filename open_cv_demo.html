@@ -31,7 +31,7 @@ url = 'clown.png'
 # reading image from a URL for CV2 based on https://stackoverflow.com/a/21062034/8508004
 # more precisely https://stackoverflow.com/a/67415360/8508004
 req = open_url(url)
-img = Image.open(BytesIO(req))
+img = Image.open(BytesIO(req.content))
 arr = np.array(img)
 image = cv2.imdecode(arr, -1) # 'Load it as it is'
 # example code from https://learning.rc.virginia.edu/notes/opencv/
