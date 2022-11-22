@@ -17,6 +17,7 @@ packages = [
         <p>This is a test To see how my html code is.</p>
         <p>This space below will become blank as a few seconds is taken to render the ????????. Be patient ...</p>
         <div id="pane"></div>
+        <img id ="img" src="src">
 
         <py-script>      
 import cv2
@@ -27,13 +28,34 @@ from PIL import Image
 
 from pyodide.http import open_url
 
+async def download(url):
+            filename = Path(url).name
+            response = await pyfetch(url)
+            if response.status == 200:
+                status = response.status
+                with open(filename, mode="wb") as file:
+                    file.write(await response.bytes())
+                return filename, status
+            else:
+                status = response.status
+                filename = None
+                return filename, status
+
+async def process_response(url):
+            response_content = await loop.run_until_complete(
+                download(url)
+                )
+            if response_content[1] == 200:
+                data = base64.b64encode(open(response_content[0], "rb").read()).decode("utf-8")
+                src = f"data:image/png;base64,{data}"
+                return src
+            else:
+                src = None
+                return src
+
 url = 'clown.png'
-# reading image from a URL for CV2 based on https://stackoverflow.com/a/21062034/8508004
-# more precisely https://stackoverflow.com/a/67415360/8508004
-req = open_url(url)
-img = Image.open(BytesIO(req.content))
-arr = np.array(img)
-image = cv2.imdecode(arr, -1) # 'Load it as it is'
+img = await process_response(url)
+document.querySelector("img").setAttribute("src", img)
 # example code from https://learning.rc.virginia.edu/notes/opencv/
 #image = cv2.imread(open_url(url))
 (h, w, d) = image.shape
