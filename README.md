@@ -34,6 +34,11 @@ Demonstrates numpy and matplotlib directly in a browser from static site.
 -------------------------
 ### What doesn't work here
 
+- 'open_cv_demo.html' Got stucl on getting an image from URL so that I could use openCV / CV2 to manipulate it. This was starting point of an attempt to extend what I was able to do with Pyodide in JupyterLite to pyscript, see [here](https://stackoverflow.com/questions/74533570/pyscript-modulenotfounderror-no-module-named-cv2#comment131573724_74533570). ([This](https://jeff.glass/post/pyscript-image-upload/) may have helped but I didn't note consulting it in code and near the end I thought I was using some of it but still no luck.)
+I got stuck on trying to read in the image from URL. I need to locate an example that is current and working.  
+I think once I got image read in I could pass the contents to numpy as an array and then cv2 can use it. I'll keep my eyes open for a modern example.  
+See the history for the many things I tried.
+
 - Full example notebook of Eduardo Bonet with both code and markdown
 
 [eduardo_sample_example.html](https://fomightez.github.io/pyscript_test/eduardo_sample_example.html) works to show plot being made from the code when you click the green arrow. However, it is supposed to also be showing markdown from the notebook being rendered. **It displays and works like from his site though!!** Go see it at https://eduardobonet.gitlab.io/nblite And so it isn't particular to GitHub and means he was seeing it have issues though. (By stripping out the pyscript stuff, I got the same approach to render markdown, see section 'Markdown cells from notebook do work.' and so it wasn't like it totally wasn't working. And in fact when it was failing to make markdown render fully, I'd see it render the markdown **for an instant** on hard refresh. And so this is probably a minor hurdle for those that know what they are doing and will get worked out soon. Note sometimes quickly entering inspection mode when trying to see what is messing up markdown rendering I'd note is showing inIt's showing in the 'Inspect' console that it is out of memory, specifically gives "WebAssembly module validated with warning: failed to allocate executable memory for module". But that didn't really seem to stop it from running the code other times when I gave it time.
