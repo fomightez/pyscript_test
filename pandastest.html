@@ -51,8 +51,9 @@ async def main():
 for x in range(477):
     print("&nbsp;   &nbsp;   &nbsp;  \n")
 
-df.head().style.format(precision=2)
+
 asyncio.ensure_future(main())
+df.head().style.format(precision=2)
         </py-script>
 <!-- dcoument based on:
 - old basics at https://github.com/pyscript/pyscript/issues/193
