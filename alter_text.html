@@ -1,0 +1,61 @@
+<html>
+  <!-- dcoument source:
+- https://stackoverflow.com/q/74869455/8508004
+-->
+  <head>
+    <title>Make lower case</title>
+    <meta charset="iso-8859-1">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.3.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@holoviz/panel@0.14.1/dist/panel.min.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="./assets/css/examples.css" />
+  </head>
+  <body>
+   <nav class="navbar" style="background-color: #000000;">
+      <div class="app-header">
+
+        <a class="title" href="" style="color: #f0ab3c;">File Reader</a>
+      </div>
+    </nav>
+    <section class="pyscript">
+      <div id="simple_app"></div>
+      <div id="upload_button"></div>
+      <div id="textarea"></div>
+      <div id="download"></div>
+
+        <py-config>
+          packages = [
+            "panel"
+            ]
+
+        </py-config>
+
+        <py-script>
+          import io
+          import panel as pn
+
+          def download_file():
+            return io.BytesIO(textarea.value.encode())
+
+          fileInput = pn.widgets.FileInput(accept='.txt')
+          uploadButton = pn.widgets.Button(name='Upload', button_type = 'primary')
+          textarea = pn.widgets.TextAreaInput(name='File data', width=1000, height=300)
+          download = pn.widgets.FileDownload(filename="lowercase.txt", callback=download_file, button_type="primary")
+
+          def process_file(event):
+            if fileInput.value is not None:
+              textarea.value = fileInput
+              textarea.value = fileInput.value.decode().lower()
+
+          pn.Row(fileInput).servable(target='simple_app')
+          pn.Row(textarea).servable(target='textarea')
+          pn.Row(uploadButton, pn.bind(process_file, uploadButton)).servable(target='upload_button')
+          pn.Row(download).servable(target='download')
+        </py-script>
+    </section>
+  </body>
+</html>
