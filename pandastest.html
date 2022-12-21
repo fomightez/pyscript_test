@@ -44,6 +44,7 @@ df = pd.read_csv(open_url(url))
           
 table = pn.widgets.Tabulator(pagination='remote', page_size=344)
 table.value = df
+"""
 async def main():
     await show(table, 'table')
 
@@ -53,6 +54,7 @@ for x in range(477):
 
 
 asyncio.ensure_future(main())
+"""
 df.head().style.format(precision=2)
         </py-script>
 <!-- dcoument based on:
