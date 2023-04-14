@@ -9,7 +9,7 @@
 
 #### Matplotlib plot examples
 
-- In Arpil 2023, I added Matplotlib example from https://pyscript.net/examples/matplotlib.html in start of effort to update plots to current ways. See `matplotlib.html)` (working on web [here](https://fomightez.github.io/pyscript_test/matplotlib.html).
+- In Arpil 2023, I added Matplotlib example from https://pyscript.net/examples/matplotlib.html in start of effort to update plots to current ways. See `matplotlib.html)` (working on web [here](https://fomightez.github.io/pyscript_test/matplotlib.html)).
 
 
 #### Markdown cells from notebook do work.
