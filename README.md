@@ -5,7 +5,11 @@
 
 #### Pandas dataframe input and display
 
-- In October 2022 I added examples using Pandas' `read_csv()` to get and render dataframes (also using panel for rendering) based on updated pyscript using py-config now. See `pandastest.html` ([on web here](https://fomightez.github.io/pyscript_test/pandastest.html)) and `csv_read_display_df_with_panel.html`  ([on web here](https://fomightez.github.io/pyscript_test/csv_read_display_df_with_panel.html)) and `csv_read_test.html`  ([on web here](https://fomightez.github.io/pyscript_test/csv_read_test.html)) and `csv_read_from_same_location.html` ([on web here](https://fomightez.github.io/pyscript_test/csv_read_from_same_location.html)).
+- In October 2022 I added examples using Pandas' `read_csv()` to get and render dataframes (also using panel for rendering) based on updated pyscript using py-config now. See `pandastest.html` (working [on web here](https://fomightez.github.io/pyscript_test/pandastest.html)) and `csv_read_display_df_with_panel.html`  (working [on web here](https://fomightez.github.io/pyscript_test/csv_read_display_df_with_panel.html)) and `csv_read_test.html`  (working [on web here](https://fomightez.github.io/pyscript_test/csv_read_test.html)) and `csv_read_from_same_location.html` (working [on web here](https://fomightez.github.io/pyscript_test/csv_read_from_same_location.html)).
+
+#### Matplotlib plot examples
+
+- In Arpil 2023, I added Matplotlib example from https://pyscript.net/examples/matplotlib.html in start of effort to update plots to current ways. See `matplotlib.html)` (working on web [here](https://fomightez.github.io/pyscript_test/matplotlib.html).
 
 
 #### Markdown cells from notebook do work.
