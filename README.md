@@ -38,7 +38,7 @@ Demonstrates numpy and matplotlib directly in a browser from static site.
 -------------------------
 ### What doesn't work here
 
-- 'open_cv_demo.html' Got stucl on getting an image from URL so that I could use openCV / CV2 to manipulate it. This was starting point of an attempt to extend what I was able to do with Pyodide in JupyterLite to pyscript, see [here](https://stackoverflow.com/questions/74533570/pyscript-modulenotfounderror-no-module-named-cv2#comment131573724_74533570). ([This](https://jeff.glass/post/pyscript-image-upload/) may have helped but I didn't note consulting it in code and near the end I thought I was using some of it but still no luck.)
+- 'open_cv_demo.html' Got stucK on getting an image from URL so that I could use openCV / CV2 to manipulate it. This was starting point of an attempt to extend what I was able to do with Pyodide in JupyterLite to pyscript, see [here](https://stackoverflow.com/questions/74533570/pyscript-modulenotfounderror-no-module-named-cv2#comment131573724_74533570). ([This](https://jeff.glass/post/pyscript-image-upload/) may have helped but I didn't note consulting it in code and near the end I thought I was using some of it but still no luck.)
 I got stuck on trying to read in the image from URL. I need to locate an example that is current and working.  
 I think once I got image read in I could pass the contents to numpy as an array and then cv2 can use it. I'll keep my eyes open for a modern example.  
 See the history for the many things I tried.
