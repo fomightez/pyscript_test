@@ -11,6 +11,7 @@
 
 - In April 2023, I added Matplotlib example from https://pyscript.net/examples/matplotlib.html in start of effort to update plots to current ways. See `matplotlib.html)` (working on web [here](https://fomightez.github.io/pyscript_test/matplotlib.html)).
 - Based on the April 2023 update of the Matplotlib and the old version, I updated the `plot_example.html` (working [on web here](https://fomightez.github.io/pyscript_test/plot_example.html)).
+- Based on the April 2023 update of the Matplotlib and [my reply to a Stackoverflow post](https://stackoverflow.com/a/76016831/8508004), I added another matplotlib example, `another_plot_example.html` (working [on web here](https://fomightez.github.io/pyscript_test/another_plot_example.html)).
 
 
 #### Markdown cells from notebook do work.
