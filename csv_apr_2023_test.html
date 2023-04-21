@@ -1,46 +1,46 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="theme-color" content="#0072b5" />
-        <meta name="name" content="CSV Getting Demo adapted from PyScript/Panel DeckGL Demo" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#0072b5" />
+    <meta name="name" content="CSV Getting Demo adapted from PyScript/Panel DeckGL Demo" />
 
-        <title>CSV Getting Demo</title>
-        <link rel="icon" type="image/x-icon" href="./favicon.png" />
-        <link
-            rel="stylesheet"
-            href="https://pyscript.net/latest/pyscript.css"
-        />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-        <link rel="stylesheet" href="./assets/css/examples.css" />
-    </head>
+    <title>CSV Getting Demo</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link
+        rel="stylesheet"
+        href="https://pyscript.net/latest/pyscript.css"
+    />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="./assets/css/examples.css" />
+</head>
 
-    <body>
+<body>
 
-        
-            <py-tutor>
-                <py-config>
-                    packages = [
-                      "numpy",
-                      "pandas",
-                    ]
-                    plugins = [
-                      "https://pyscript.net/latest/plugins/python/py_tutor.py"
-                    ]
-                </py-config>
+    
+        <py-tutor>
+            <py-config>
+                packages = [
+                  "numpy",
+                  "pandas",
+                ]
+                plugins = [
+                  "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                ]
+            </py-config>
 
-                <py-script>
-                    import pandas as pd
+            <py-script>
+                import pandas as pd
 
-                    from pyodide.http import open_url
+                from pyodide.http import open_url
 
-                    url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv''
-                    df = pd.read_csv(open_url(url))
-                    print(df.head())
-                </py-script>
-            </py-tutor>
-        </section>
-    </body>
+                url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv'
+                df = pd.read_csv(open_url(url))
+                print(df.head())
+            </py-script>
+        </py-tutor>
+    </section>
+</body>
 </html>
