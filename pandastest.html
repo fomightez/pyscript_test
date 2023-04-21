@@ -42,21 +42,19 @@ df = pd.read_csv(open_url(url))
 print(df.head())
 #print(df.to_html())
 
-<!-- to see if above works          
-table = pn.widgets.Tabulator(pagination='remote', page_size=344)
-table.value = df
+#table = pn.widgets.Tabulator(pagination='remote', page_size=344)
+#table.value = df
 
-async def main():
-    await show(table, 'table')
-
-
-for x in range(477):
-    print("&nbsp;   &nbsp;   &nbsp;  \n")
+#async def main():
+#   await show(table, 'table')
 
 
-asyncio.ensure_future(main())
-df.head().style.format(precision=2)
--->
+#for x in range(477):
+#    print("&nbsp;   &nbsp;   &nbsp;  \n")
+
+
+#asyncio.ensure_future(main())
+#df.head().style.format(precision=2)
         </py-script>
 <!-- dcoument based on:
 - old basics at https://github.com/pyscript/pyscript/issues/193
