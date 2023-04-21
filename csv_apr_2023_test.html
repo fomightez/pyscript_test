@@ -18,6 +18,10 @@
 </head>
 
 <body>
+        <div id="pandas-output" hidden>
+            <h3>Output</h3>
+            <div id="pandas-output-inner"></div>
+        </div>
 
     
         <py-tutor>
@@ -38,7 +42,10 @@
 
                 url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/turtles.csv'
                 df = pd.read_csv(open_url(url))
-                print(df.head())
+                
+                Element("pandas-output").element.style.display = "block"
+                
+                display (df.head().style.format(precision=2), target="pandas-output-inner", append="False")
             </py-script>
         </py-tutor>
     </section>
