@@ -14,6 +14,11 @@ packages = [
         <p>This is a test To see how my html code is.</p>
         <p>This space below will become blank as a few seconds is taken to render the dataframe. Be patient ...</p>
         <div id="pane"></div>
+        <div id="pandas-output" hidden>
+            <h3>Output</h3>
+            <div id="pandas-output-inner"></div>
+        </div>
+      
 
         <py-script>      
 import pandas as pd
@@ -26,7 +31,11 @@ df = pd.read_csv(open_url(url))
 #print(df.head())
 #print(df.to_html())
 
-df.head(39).style.format(precision=2)
+
+          
+Element("pandas-output").element.style.display = "block"
+
+display (df.head(39).style.format(precision=2), target="pandas-output-inner", append="False")
 
 
 
