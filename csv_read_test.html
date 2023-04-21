@@ -26,7 +26,8 @@ df = pd.read_csv(open_url(url))
 #print(df.head())
 #print(df.to_html())
 
-print(df.head(39).style.format(precision=2))
+styler = df.head(39).style.format(precision=2)
+htmlCodeWithStyle = styler.to_html()
 
 
 
