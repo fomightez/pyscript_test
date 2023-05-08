@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="helloDiv"></div>
+    <button id="my-button" py-onClick="display_hello()">Click me</button>
     <div id="chart1"></div>
     <py-script>
         import js, json, plotly
@@ -17,6 +18,11 @@
         
         def select_params(trace, points, selector):
             display('Hello, World!', target="helloDiv")
+        
+        def display_hello():
+            # this fails because we don't have any implicit target
+            # from event handlers
+            display('hello', target="helloDiv")
 
         #fig = px.line(x=[1,2, 3], y=[1, 2, 3]) 
         fig = go.Figure(data=go.Scatter(x=[1,2, 3], y=[1, 2, 3]))
