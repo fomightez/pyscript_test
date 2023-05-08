@@ -15,15 +15,15 @@
         import plotly.graph_objects as go
         
         def select_params(trace, points, selector):
-            print('Hello, World!')
+            display('Hello, World!', target="helloDiv")
 
         #fig = px.line(x=[1,2, 3], y=[1, 2, 3]) 
         fig = go.Figure(data=go.Scatter(x=[1,2, 3], y=[1, 2, 3]))
         fig.data[0].on_click(select_params) # <-- does not work
         graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
         plot = js.Plotly.newPlot("chart1", js.JSON.parse(graphJSON))
-
-        
+ 
     </py-script>
+<div id="helloDiv"></div>
 </body>
 </html>
