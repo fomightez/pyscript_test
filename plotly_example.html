@@ -8,6 +8,7 @@
     </py-config>
 </head>
 <body>
+    <div id="helloDiv"></div>
     <div id="chart1"></div>
     <py-script>
         import js, json, plotly
@@ -24,6 +25,6 @@
         plot = js.Plotly.newPlot("chart1", js.JSON.parse(graphJSON))
  
     </py-script>
-<div id="helloDiv"></div>
+
 </body>
 </html>
