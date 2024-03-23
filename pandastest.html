@@ -39,10 +39,11 @@ import panel as pn
 from panel.io.pyodide import show
 
 from pyodide.http import open_url
+from pyscript import display
 
 url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv'
 df = pd.read_csv(open_url(url))
-#print(df.head())
+display(df.head())
 #print(df.to_html())
 
           
@@ -62,6 +63,7 @@ df.head().style.format(precision=2)
         </py-script>
 <!-- document based on:
     - https://pyscript.com/@examples/bokeh/latest
+    - https://pyscript.com/@examples/simple-panel/latest
 - old basics at https://github.com/pyscript/pyscript/issues/193
 - for read csv from URL https://geo.rocks/post/pyscript/
 - verify `open_url` for read_csv recommended currently: https://pyscript.net/examples/panel_deckgl.html
