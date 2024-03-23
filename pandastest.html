@@ -1,23 +1,22 @@
 <html>
   <head>
     <title>Panndas Example using BOTH Panel's Table to display along with Panda's styler</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.js"></script>
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.js"></script>
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"></script>
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.2.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@holoviz/panel@0.13.0/dist/panel.min.js"></script>
-    <script type="text/javascript">
-      Bokeh.set_log_level("info");
+    <!-- bokeh scripts -->
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.2.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.2.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.2.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
     </script>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <py-config>
 packages = [
-    "https://cdn.holoviz.org/panel/0.14.3/dist/wheels/bokeh-2.4.3-py3-none-any.whl",
+    "bokeh==3.2.2",
     "pandas",
     "panel",
       ]
@@ -57,7 +56,8 @@ async def main():
 asyncio.ensure_future(main())
 df.head().style.format(precision=2)
         </py-script>
-<!-- dcoument based on:
+<!-- document based on:
+    - https://pyscript.com/@examples/bokeh/latest
 - old basics at https://github.com/pyscript/pyscript/issues/193
 - for read csv from URL https://geo.rocks/post/pyscript/
 - verify `open_url` for read_csv recommended currently: https://pyscript.net/examples/panel_deckgl.html
