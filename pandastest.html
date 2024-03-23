@@ -55,8 +55,7 @@ display(df.head())
           
 #table = pn.widgets.Tabulator(pagination='remote', page_size=344)
 #table.value = df
-tabulator = pn.widgets.Tabulator(df, height=750, width=800).servable(target='table')
-
+tabulator = pn.widgets.Tabulator(df, pagination='remote', page_size=10).servable(target='table')
 
 
 #async def main():
