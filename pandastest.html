@@ -33,7 +33,6 @@ packages = [
 
         <py-script>
         
-import asyncio
 import pandas as pd
 import panel as pn
 from panel.io.pyodide import show
@@ -44,22 +43,15 @@ from pyscript import display
 url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv'
 df = pd.read_csv(open_url(url))
 display(df.head())
-#print(df.to_html())
+display(df.to_html())
 
           
 table = pn.widgets.Tabulator(pagination='remote', page_size=344)
 table.value = df
 
-async def main():
-    await show(table, 'table')
+show(table, 'table')
 
-
-#for x in range(477):
-#   print("&nbsp;   &nbsp;   &nbsp;  \n")
-
-
-asyncio.ensure_future(main())
-df.head().style.format(precision=2)
+display(df.head().style.format(precision=2))
         </py-script>
 <!-- document based on:
     - https://pyscript.com/@examples/bokeh/latest
