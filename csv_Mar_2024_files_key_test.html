@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#0072b5" />
+    <meta name="name" content="CSV Getting Demo adapted from PyScript/Panel DeckGL Demo to answer SO https://stackoverflow.com/q/76069710/8508004 - UPDATED TO USE FILES BASED ON https://stackoverflow.com/a/78049663/8508004" />
+
+    <title>CSV Getting Demo</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link
+        rel="stylesheet"
+        href="https://pyscript.net/latest/pyscript.css"
+    />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/examples/assets/css/examples.css" />
+</head>
+
+<body>
+        <div id="pandas-output" hidden>
+            <h3>Output</h3>
+            <div id="pandas-output-inner"></div>
+        </div>
+
+    
+        <py-tutor>
+            <py-config>
+                packages = [
+                  "numpy",
+                  "pandas",
+                  "jinja2"
+                ]
+                [files]
+                "https://raw.githubusercontent.com/fomightez/pyscript_test/main/turtles.csv" = "./turtles.csv"
+                plugins = [
+                  "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                ]
+            </py-config>
+
+            <py-script>
+                import pandas as pd
+                df = pd.read_csv('turtles.csv')
+                
+                Element("pandas-output").element.style.display = "block"
+                
+                display (df.head().style.format(precision=2), target="pandas-output-inner", append="False")
+            </py-script>
+        </py-tutor>
+    </section>
+</body>
+</html>
