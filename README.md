@@ -43,6 +43,8 @@ Based on update that doesn't allow `print()`, see [here](https://docs.pyscript.n
 -------------------------
 ### What doesn't work here
 
+- I tried to make the CSV retrieval example based on `[files]` key use as described [here](https://stackoverflow.com/a/78049663/8508004). [code](https://github.com/fomightez/pyscript_test/blob/main/csv_Mar_2024_files_key_test.html) . [Demo link](https://fomightez.github.io/pyscript_test/csv_Mar_2024_files_key_test.html). It didn't seem to work, like the `[[fetch]]` one does. I think I need a better example for this. The ones in the current (March 2024) examples don't seem to use this and still use the older `open_url` approach, despite what was said [here](https://stackoverflow.com/a/76148659/8508004) in May 2023 about `[[fetch]]` that pre-dates `[files]`.
+
 - 'open_cv_demo.html' Got stucK on getting an image from URL so that I could use openCV / CV2 to manipulate it. This was starting point of an attempt to extend what I was able to do with Pyodide in JupyterLite to pyscript, see [here](https://stackoverflow.com/questions/74533570/pyscript-modulenotfounderror-no-module-named-cv2#comment131573724_74533570). ([This](https://jeff.glass/post/pyscript-image-upload/) may have helped but I didn't note consulting it in code and near the end I thought I was using some of it but still no luck.)
 I got stuck on trying to read in the image from URL. I need to locate an example that is current and working.  
 I think once I got image read in I could pass the contents to numpy as an array and then cv2 can use it. I'll keep my eyes open for a modern example.  
