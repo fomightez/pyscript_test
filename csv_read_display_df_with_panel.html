@@ -52,7 +52,7 @@ df = pd.read_csv(open_url(url))
 #display(df.to_html())
 
           
-df_pane = pn.pane.DataFrame(df, width=400).servable(target='pane')
+df_pane = pn.pane.DataFrame(df).servable(target='pane')
 #show(df_pane, 'pane')
 #df.head().style.format(precision=2)
 
