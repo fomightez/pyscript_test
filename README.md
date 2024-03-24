@@ -38,7 +38,7 @@ Demonstrates numpy and matplotlib directly in a browser from static site.
 
 - Plotly example makes a plot using Plotly graph objects
 
-Based on update that doesn't allow `print()`, see [here](https://docs.pyscript.net/latest/reference/API/display.html), and [my reply to a Stackoverflow post] (https://stackoverflow.com/q/76187420/8508004). The line plot, actually scatter, using Plotly graph objects works and displays but nothing happens if you click on it, which was what the OP at Stackoverflow was seeking. OP was using Plotly Express which I' not sure even works with Plotly's `.on_click()` method. 
+Based on update that doesn't allow `print()`, see [here](https://docs.pyscript.net/latest/reference/API/display.html), and [my reply to a Stackoverflow post](https://stackoverflow.com/q/76187420/8508004). The line plot, actually scatter, using Plotly graph objects works and displays but nothing happens if you click on it, which was what the OP at Stackoverflow was seeking. OP was using Plotly Express which I' not sure even works with Plotly's `.on_click()` method. 
 
 -------------------------
 ### What doesn't work here
