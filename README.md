@@ -21,13 +21,13 @@
   **see [here](https://fomightez.github.io/pyscript_test/test_md_render.html) to see proof using [Eduoardo Bonet's approach](https://twitter.com/EduardoBonet/status/1521841937233465345) at least for now it renders markdown from notebooks just fine** (I had to remove the pyscript stuff because something was causing it to error out and not show markdown.)
   
   
-#### REPL executing code
+#### REPL executing code / and Terminals
 
-- REPL page: [REPL_page based on November '23 and early 2024 changes](https://fomightez.github.io/pyscript_test/REPL_march_2024.html)  REPL based on  on the code in an article detailing ['What's New in PyScript Next (2023.11.1')](https://jeff.glass/post/whats-new-pyscript-2023-11-1/). Things have changed:
+- REPL page with older pyscript: [direct_example.html](https://fomightez.github.io/pyscript_test/direct_example.html) is based on the example [this post](https://twitter.com/ericmjl/status/1520865845978746880) with the code from [this gist](https://gist.github.com/ericmjl/0e46f3810b7bac281ddc419176944483templates)
+
+- terminal page: [terminal_page based on November '23 and early 2024 changes](https://fomightez.github.io/pyscript_test/REPL_march_2024.html)  terminal based on [code for a terminal supplied here](https://github.com/JeffersGlass/pyscript/tree/84f197b657a6fae5573b1b8b11b2dad1a05f5531); I had hoped to make an interactive REPL like the code in an article detailing ['What's New in PyScript Next (2023.11.1')](https://jeff.glass/post/whats-new-pyscript-2023-11-1/). Things have changed:
     > "PyScript no longer imports any names into the Python namespace for you. This differs from the previous release, where the names js, pyscript, Element, display, and HTML were treated a bit like builtins, and imported prior to any user-written code."
-    And I'm hoping the new REPL may be helpful finding things like `Element` so that I can import it.
-
-- Older REPL page: [direct_example.html](https://fomightez.github.io/pyscript_test/direct_example.html) is based on the example [this post](https://twitter.com/ericmjl/status/1520865845978746880) with the code from [this gist](https://gist.github.com/ericmjl/0e46f3810b7bac281ddc419176944483templates)
+    And I was hoping the new interactive REPL would be helpful finding things like `Element` so that I can import it. However, the interactive version failed to work like in the documentation or that article with either the 2023.11.2 or 2024.3.2 pyscript code. Or at least failed in my attempts so far.
 
 
 ----------
