@@ -20,7 +20,7 @@
 </head>
 
 <body>
-        <div id="pandas-output" hidden>
+        <div id="pandas-output" >
             <h3>Output</h3>
             <div id="pandas-output-inner"></div>
         </div>
@@ -44,7 +44,7 @@
                 import pandas as pd
                 df = pd.read_csv('turtles.csv')
                 
-                pydom.Element("pandas-output").style.display = "block"
+                <!-- pydom.Element("pandas-output").style.display = "block" -->
                 
                 display (df.head().style.format(precision=2), target="pandas-output-inner", append="False")
             </py-script>
