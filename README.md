@@ -24,8 +24,8 @@
 #### REPL executing code
 
 - REPL page: [REPL_page based on November and early 2024 changes](https://fomightez.github.io/pyscript_test/REPL_march_2024.html)  REPL based on  on the code in an article detailing ['What's New in PyScript Next (2023.11.1')](https://jeff.glass/post/whats-new-pyscript-2023-11-1/). Things have changed:
-> , PyScript no longer imports any names into the Python namespace for you. This differs from the previous release, where the names js, pyscript, Element, display, and HTML were treated a bit like builtins, and imported prior to any user-written code.
-And I'm hoping the new REPL may be helpful finding things like `Element` so that I can import it.
+    > , PyScript no longer imports any names into the Python namespace for you. This differs from the previous release, where the names js, pyscript, Element, display, and HTML were treated a bit like builtins, and imported prior to any user-written code.
+    And I'm hoping the new REPL may be helpful finding things like `Element` so that I can import it.
 
 - Older REPL page: [direct_example.html](https://fomightez.github.io/pyscript_test/direct_example.html) is based on the example [this post](https://twitter.com/ericmjl/status/1520865845978746880) with the code from [this gist](https://gist.github.com/ericmjl/0e46f3810b7bac281ddc419176944483templates)
 
