@@ -30,7 +30,9 @@
 
 - terminal page: [terminal_page based on November '23 and early 2024 changes](https://fomightez.github.io/pyscript_test/REPL_march_2024.html)  terminal based on [code for a terminal supplied here](https://github.com/JeffersGlass/pyscript/tree/84f197b657a6fae5573b1b8b11b2dad1a05f5531); I had hoped to make an interactive REPL like the code in an article detailing ['What's New in PyScript Next (2023.11.1')](https://jeff.glass/post/whats-new-pyscript-2023-11-1/). Things have changed:
     > "PyScript no longer imports any names into the Python namespace for you. This differs from the previous release, where the names js, pyscript, Element, display, and HTML were treated a bit like builtins, and imported prior to any user-written code."
+
     And I was hoping the new interactive REPL would be helpful finding things like `Element` so that I can import it. However, the interactive version failed to work like in the documentation or that article with either the 2023.11.2 or 2024.3.2 pyscript code. Or at least failed in my attempts so far.
+    I see at https://twitter.com/JeffersGlass/status/1783116332558328178 there is an update: "There's a new release of http://pyscript.recipes today! Include fresh corrections, plus information on the py-terminal tag". And when I look at the page about , I see it warns: "The interactive REPL is only accessible when the terminal's interpreter is running in a worker." However, I don't know how to implement that worker yet. So even with new information, I think it is presently a dead end for me.
 
 
 ----------
