@@ -52,7 +52,7 @@ from pyscript import display
 url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv' #<--- works, but should porbably use more popular source, it possible
 #url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'
 df = pd.read_csv(open_url(url))
-#display(df.head())
+display(df.head())
 #display(df.to_html())
 
           
@@ -71,6 +71,7 @@ df = pd.read_csv(open_url(url))
 
 #asyncio.ensure_future(main())
 df.head().style.format(precision=2)
+display(df.head().style.format(precision=2))
         </py-script>
 <!-- document based on:
     - https://pyscript.com/@examples/bokeh/latest
