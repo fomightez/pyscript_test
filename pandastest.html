@@ -49,8 +49,8 @@ from panel.io.pyodide import show
 from pyodide.http import open_url
 from pyscript import display
 
-url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv' #<--- works, but should porbably use more popular source, it possible
-#url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'
+#url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv' #<--- works, but should probably use more popular source, it possible
+url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'
 df = pd.read_csv(open_url(url))
 display(df.head())
 #display(df.to_html())
