@@ -15,7 +15,7 @@
             Bokeh.set_log_level("info");
         </script>
     <!-- panel scripts -->
-        <script defer src="https://cdn.jsdelivr.net/npm/@holoviz/panel@1.3.1/dist/panel.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@holoviz/panel@1.3.8/dist/panel.min.js"></script>
 
         <!-- PyScript CSS -->
         <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
@@ -29,7 +29,7 @@
 packages = [
     "bokeh==3.2.2",
     "pandas",
-    "panel",
+    "panel==1.3.8",
       ]
   </py-config>
     <body>
@@ -46,7 +46,8 @@ from panel.io.pyodide import show
 
 from pyodide.http import open_url
 
-url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv'
+#url = 'https://raw.githubusercontent.com/fomightez/pyscript_test/main/penguins.csv' #<--- works, but should probably use more popular source, if possible
+url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'
 df = pd.read_csv(open_url(url))
 #display(df.head())
 #display(df.to_html())
