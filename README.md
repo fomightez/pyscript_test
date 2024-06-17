@@ -12,7 +12,7 @@
 
 #### Matplotlib plot examples
 
-- In April 2023, I added Matplotlib example from https://pyscript.net/examples/matplotlib.html in start of effort to update plots to current ways. See `matplotlib.html)` (working on web [here](https://fomightez.github.io/pyscript_test/matplotlib.html)). This was updated in June 2014 to add more modern ways and this includes a `...loading` screen that I left off many (all?) of my updates earlier this year in 2024 so far, see the section 'Pandas dataframe input and display'.
+- In April 2023, I added Matplotlib example from https://pyscript.net/examples/matplotlib.html in start of effort to update plots to current ways. See `matplotlib.html)` (working on web [here](https://fomightez.github.io/pyscript_test/matplotlib.html)). This was updated in June 2024 to add more current ways, based on the **current** example now [here](https://pyscript.com/@examples/matplotlib/latest), adapted to be single-page, and this includes a `...loading` screen that I left off many (all?) of my updates earlier this year in 2024 so far, see the section 'Pandas dataframe input and display'.
 - Based on the April 2023 update of the Matplotlib and the old version, I updated the `plot_example.html` (working [on web here](https://fomightez.github.io/pyscript_test/plot_example.html)).
 - Based on the April 2023 update of the Matplotlib and [my reply to a Stackoverflow post](https://stackoverflow.com/a/76016831/8508004), I added another matplotlib example, `another_plot_example.html` (working [on web here](https://fomightez.github.io/pyscript_test/another_plot_example.html)).
 
