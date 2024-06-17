@@ -22,31 +22,26 @@
         </script>
     </head>
     <body>
+        <dialog id="loading">
+            <h1>Loading...</h1>
+        </dialog>
+
         <nav class="navbar" style="background-color: #000000">
             <div class="app-header">
                 <a href="/">
-                    <img src="https://pyscript.net/examples/logo.png" class="logo" />
+                    <img src="./assets/logo.png" class="logo" />
                 </a>
                 <a class="title" href="" style="color: #f0ab3c">Matplotlib</a>
             </div>
         </nav>
+
         <section class="pyscript">
             <div id="mpl"></div>
-
-            <py-tutor>
-                <py-config>
-                    packages = [
-                      "matplotlib"
-                    ]
-                    plugins = [
-                      "https://pyscript.net/latest/plugins/python/py_tutor.py"
-                    ]
-                </py-config>
-
-                <py-script>
+            <py-script>
                     import matplotlib.pyplot as plt
                     import matplotlib.tri as tri
                     import numpy as np
+                    from pyscript import display
 
                     # First create the x and y coordinates of the points.
                     n_angles = 36
@@ -77,8 +72,6 @@
                     ax1.set_title('tripcolor of Delaunay triangulation, flat shading')
 
                     display(fig1, target="mpl")
-                </py-script>
-            </py-tutor>
         </section>
     </body>
 </html>
