@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Matplotlib - from https://pyscript.net/examples/matplotlib.html April 2023</title>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/x-icon" href="https://pyscript.net/examples/favicon.png" />
+        <link
+            rel="stylesheet"
+            href="https://pyscript.net/latest/pyscript.css"
+        />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <link rel="stylesheet" href="https://pyscript.net/examples/assets/css/examples.css" />
+    </head>
+    <body>
+        <nav class="navbar" style="background-color: #000000">
+            <div class="app-header">
+                <a href="/">
+                    <img src="https://pyscript.net/examples/logo.png" class="logo" />
+                </a>
+                <a class="title" href="" style="color: #f0ab3c">Matplotlib</a>
+            </div>
+        </nav>
+        <section class="pyscript">
+            <div id="mpl"></div>
+
+            <py-tutor>
+                <py-config>
+                    packages = [
+                      "matplotlib",
+                      "numpy"
+                    ]
+                    plugins = [
+                      "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                    ]
+                </py-config>
+
+                <h1>PyScript Hello World</h1>
+
+Hello world!<br />
+
+Shown is a polynomial curve.
+              <py-script>
+                    import numpy as np 
+                    import matplotlib.pyplot as plt
+                    fig = plt.figure()
+                    x = np.linspace(-3, 3, 1000)
+                    y = x**2
+                    plt.plot(x, y)
+
+                    display(fig, target="mpl")
+                </py-script>
+            </py-tutor>
+        </section>
+    </body>
+</html>
