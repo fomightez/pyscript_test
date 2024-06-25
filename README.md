@@ -1,5 +1,4 @@
-## trying pyscript stuff
-
+## My Pyscript playground
 
 ### What does work here
 
@@ -34,6 +33,12 @@
     And I was hoping the new interactive REPL would be helpful finding things like `Element` so that I can import it. However, the interactive version failed to work like in the documentation or that article with either the 2023.11.2 or 2024.3.2 pyscript code. Or at least failed in my attempts so far.
     I see at https://twitter.com/JeffersGlass/status/1783116332558328178 there is an update: "There's a new release of http://pyscript.recipes today! Include fresh corrections, plus information on the py-terminal tag". And when I look at the page about , I see it warns: "The interactive REPL is only accessible when the terminal's interpreter is running in a worker." However, I don't know how to implement that worker yet. So even with new information, I think it is presently a dead end for me.
 
+-----------
+
+## Related
+
+If you like Pyscript, you may also be interested in Py.cafe.   
+[My Py.cafe gallery](https://py.cafe/fomightez).
 
 ----------
 
