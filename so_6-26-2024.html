@@ -28,8 +28,7 @@
     
         <py-config>
                 packages = [
-                  "pandas",
-                   "jinja2"
+                  "pandas"
                 ]
             </py-config>
 
@@ -46,7 +45,8 @@
                 
                 <!-- pydom.Element("pandas-output").style.display = "block" -->
                 
-                display (df.head().style.format(precision=2), target="pandas-output-inner", append="False")
+                #display (df.head().style.format(precision=2), target="pandas-output-inner", append="False")
+                display (df, target="pandas-output-inner", append="False")
             </py-script>
         </py-tutor>
     </section>
