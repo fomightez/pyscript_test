@@ -5,9 +5,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="theme-color" content="#0072b5" />
-    <meta name="name" content="CSV Getting Demo with files key adapted from PyScript/Panel DeckGL Demo to answer SO https://stackoverflow.com/q/76069710/8508004 - UPDATED TO USE FILES BASED ON https://stackoverflow.com/a/78049663/8508004" />
+    <meta name="name" content="Pandas display test to answer SO https://stackoverflow.com/q/78669302/8508004 />
 
-    <title>CSV Getting Demo with files key</title>
+    <title>Pandas display test to answer SO https://stackoverflow.com/q/78669302/8508004 /title>
     <link rel="icon" type="image/x-icon" href="./favicon.png" />
     <link
         rel="stylesheet"
@@ -26,22 +26,23 @@
         </div>
 
     
-        <py-tutor>
-            <py-config>
+        <py-config>
                 packages = [
-                  "numpy",
-                  "pandas",
-                  "jinja2"
+                  "pandas"
                 ]
-                [files]
-                "https://raw.githubusercontent.com/fomightez/pyscript_test/main/turtles.csv" = ""
-        
             </py-config>
 
             <py-script>
                 from pyscript import display
                 from pyweb import pydom
                 import pandas as pd
+                import pandas as pd
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
                 df = pd.read_csv('turtles.csv')
                 
                 <!-- pydom.Element("pandas-output").style.display = "block" -->
