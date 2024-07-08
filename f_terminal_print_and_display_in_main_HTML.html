@@ -1,0 +1,46 @@
+
+<html>
+  <head>
+    <title>Pandas Dataframe showing in both a terminal and in the main HTML section of page</title>
+     <!--see 'document based on' info at bottom-->
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.2/core.css">
+
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.6.2/core.js"></script>
+
+  </head>
+  <py-config>
+        "packages" = ["pandas"]
+        [files]
+        "penguins.csv"
+    </py-config>
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is a test to see how my html code is.</p>
+        <p>This space below will become blank as several seconds is taken to render the table. Be patient ...</p>
+        <div id="table"></div>
+
+            <script type="py" terminal>
+      import pandas as pd
+      from pyscript import display  
+      df = pd.read_csv("penguins.csv")
+      print(df)
+      display(df)  
+    </script>    
+<svg style="z-index:9997;position:fixed;bottom:0;right:0" viewBox="0 0 315 27" width="315" height="27">
+  <path d="M143.905 0.043004L85.585 0.105C75.385 0.0870005 66.415 1.866 58.655 5.535C50.765 9.265 42.855 12.989 34.975 16.73C27.165 20.443 26.057 22.638 15.778 22.501C5.775 22.368 2.44 26.781 0 26.781L0.545006 26.693C22.005 26.672 43.455 26.676 64.915 26.676C90.655 26.676 116.395 26.665 142.135 26.699C143.115 26.699 143.915 26.259 143.915 25.707C143.855 11.729 143.855 14.026 143.915 0.0490007L143.905 0.043004Z" fill="#292929"></path>
+  <path d="M140.258 0L315 0.340524L314.966 27L140 26.9616L140.258 0Z" fill="#292929"></path>
+</svg>
+<div style="z-index:9998;font-family:sans-serif;background-color:#292929;padding:2px 8px;position:fixed;bottom:0;right:0;left:0"></div>
+<div style="z-index:9999;color:white;font-size: 0.7rem;font-family:sans-serif;padding: 5px;position:fixed;bottom:0;right:0">
+  <a href="https://pyscript.com/@_12" id="made-on" target="_blank" style="color:#FFF;text-decoration:none;">Made on pyscript.com</a>&nbsp;│&nbsp;<a href="https://pyscript.com/@_12/bold-credit/latest" id="view-code" target="_blank" style="color:#FFF;text-decoration:none;">View Code</a><span id="install-pwa-section" hidden>&nbsp;│&nbsp; <a id="install-pwa" style="cursor:pointer; color:#FFF;">Install</a></span>&nbsp;&nbsp
+</div>
+<!-- document based on:
+    - https://_12.pyscriptapps.com/bold-credit/latest/
+    - https://github.com/fomightez/pyscript_test/blob/main/pandastest.html and what is listed under 'dcoument based on' therein
+
+-->
+    </body>
+
+</html>
