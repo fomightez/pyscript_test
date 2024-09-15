@@ -1,10 +1,6 @@
 <html>
- <!-- dcoument based on:
-- https://pyscript.net/examples/matplotlib.html and adapting to https://stackoverflow.com/q/76014723/8508004 and now updated to 2024 approaches, see https://stackoverflow.com/q/78629489/8508004
-
--->
     <head>
-        <title>Matplotlib - originally from https://pyscript.net/examples/matplotlib.html April 2023, updated to 2024 approaches</title>
+        <title>Matplotlib - from https://pyscript.net/examples/matplotlib.html Sept 2024</title>
         <meta charset="utf-8" />
         <link rel="icon" type="image/x-icon" href="https://pyscript.net/examples/favicon.png" />
         <link
@@ -25,21 +21,17 @@
             loading.showModal();
         </script>
     </head>
+    <py-config>
+        packages = ["matplotlib"]
+    </py-config>
     <body>
         <dialog id="loading">
             <h1>Loading...</h1>
         </dialog>
+
         <section class="pyscript">
             <div id="mpl"></div>
-
-            <py-tutor>
-                <py-config>
-                    packages = [
-                      "matplotlib"
-                    ]
-                </py-config>
-
-                <py-script>
+            <py-script>
                     import matplotlib.pyplot as plt
                     from pyscript import display
                     fig, ax = plt.subplots()
@@ -59,7 +51,6 @@
                     plt.legend(loc='lower right')
 
                     display(fig, target="mpl")
-                </py-script>
         </section>
     </body>
 </html>
